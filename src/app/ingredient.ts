@@ -4,5 +4,4 @@ export class Ingredient {
         public amount: number,
         public units: string
     ){};
-    }
 }

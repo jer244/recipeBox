@@ -26,7 +26,8 @@ export class IndexComponent implements OnInit {
           new Ingredient("meatball", 3, "balls")
         ],
         4,
-        "http://www.smithfieldfoods.com/images/home/packaged-brands/armour-food.jpg"
+        "http://www.smithfieldfoods.com/images/home/packaged-brands/armour-food.jpg",
+        "entree"
         ),
     new Recipe(
       "Chicken Wings", 
@@ -35,7 +36,8 @@ export class IndexComponent implements OnInit {
           new Ingredient("Hot Sauce", 6, "oz")
         ],
         2,
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D8PWoKgB0u1eQrsbZ_cVIQQT2IOKNvI9sRopWD2MiSMEbBAi"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_D8PWoKgB0u1eQrsbZ_cVIQQT2IOKNvI9sRopWD2MiSMEbBAi",
+        "app",
         ),
     new Recipe(
       "Turkey Sandwich", 
@@ -47,8 +49,21 @@ export class IndexComponent implements OnInit {
           new Ingredient("Mayo", 2, "oz")
         ],
         1,
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSALUV8gnFxhKN36nT8iO_xIaGWhyi5OgmgQQTuFdspYKtfh9i9cA"
-        )
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSALUV8gnFxhKN36nT8iO_xIaGWhyi5OgmgQQTuFdspYKtfh9i9cA",
+        "entree"
+        ),
+    new Recipe(
+      "Hot Fudge Sundae",
+      [
+        new Ingredient("Ice Cream", 3, "scoops"),
+        new Ingredient("Hot Fudge", 2, "oz"),
+        new Ingredient("Whip Cream", 2, "oz"),
+        new Ingredient("Cherry", 1, "piece")
+      ],
+      1,
+      "https://i0.wp.com/theheritagecook.com/wp-content/uploads/2010/08/Hot-Fudge-Sundae-in-Blue-Glass-iStock.jpg",
+      "dessert"
+    )
   ]
 
 

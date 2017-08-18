@@ -4,21 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { IndexComponent } from './index/index.component';
-import { DetailsComponent } from './details/details.component';
+import { IndexComponent } from './recipes/index/index.component';
+import { DetailsComponent } from './recipes/details/details.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeService } from  './recipes/recipe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    DetailsComponent
+    DetailsComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

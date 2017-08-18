@@ -1,0 +1,19 @@
+<h2>Index</h2>
+<h3>
+  Appetizers:
+</h3>
+<div *ngFor="let recipe of myRecipes">
+  <div *ngIf="recipe.category=='app'">{{recipe.title}}</div>
+</div>
+<h3>
+  Entrees:
+</h3>
+<div *ngFor="let recipe of myRecipes">
+  <div *ngIf="recipe.category=='entree'">{{recipe.title}}</div>
+</div>
+<h3>
+  Desserts:
+</h3>
+<div *ngFor="let recipe of myRecipes">
+  <div *ngIf="recipe.category=='dessert'">{{recipe.title}}</div>
+</div>

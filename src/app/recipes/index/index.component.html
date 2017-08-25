@@ -3,17 +3,26 @@
   Appetizers:
 </h3>
 <div *ngFor="let recipe of recipes">
-  <div *ngIf="recipe.category=='app'" (click)="selected.emit(recipe)">{{recipe.title}}</div>
+  <div *ngIf="recipe.category=='app'" (click)="selectedFromIndex(recipe)">
+    <img src="{{recipe.image}}" class="indexImage">
+    {{recipe.title}}
+  </div>
 </div>
 <h3>
   Entrees:
 </h3>
 <div *ngFor="let recipe of recipes">
-  <div *ngIf="recipe.category=='entree'" (click)="selected.emit(recipe)">{{recipe.title}}</div>
+  <div *ngIf="recipe.category=='entree'" (click)="selectedFromIndex(recipe)">
+    <img src="{{recipe.image}}" class="indexImage">
+    {{recipe.title}}
+  </div>
 </div>
 <h3>
   Desserts:
 </h3>
 <div *ngFor="let recipe of recipes">
-  <div *ngIf="recipe.category=='dessert'" (click)="selected.emit(recipe)">{{recipe.title}}</div>
+  <div *ngIf="recipe.category=='dessert'" (click)="selectedFromIndex(recipe)">
+    <img src="{{recipe.image}}" class="indexImage">
+    {{recipe.title}}
+  </div>
 </div>

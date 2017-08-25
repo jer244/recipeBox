@@ -19,7 +19,7 @@ export class RecipesComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
-      this.myRecipes = this.recipeService.recipeSeed;
+      this.myRecipes = this.recipeService.recipeSeeder;
   }
 
 }

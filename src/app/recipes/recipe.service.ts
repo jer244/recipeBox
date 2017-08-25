@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Ingredient } from "app/ingredient";
 import { Recipe } from "app/recipe";
 
@@ -7,7 +7,14 @@ export class RecipeService {
 
   constructor() { }
 
-    recipeSeed: Recipe[] = [
+  selectedRecipe: Recipe;
+  pushRecipe = new EventEmitter();
+
+  pushSelectedRecipe(recipe: Recipe) {
+    this.pushRecipe.emit(recipe);
+  }
+
+  recipeSeeder: Recipe[] = [
     new Recipe(
       "Spaghetti and Meatballs", 
         [
@@ -54,7 +61,7 @@ export class RecipeService {
       "https://i0.wp.com/theheritagecook.com/wp-content/uploads/2010/08/Hot-Fudge-Sundae-in-Blue-Glass-iStock.jpg",
       "dessert"
     )
-  ]
+]
 
 
 }

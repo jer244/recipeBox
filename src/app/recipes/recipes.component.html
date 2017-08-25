@@ -1,11 +1,10 @@
-<h1>
-  My Recipe Box
-</h1>
 <div class="appBody">
 <rb-index [recipes]="myRecipes"
           (selected)="selectRecipe($event)"
           ></rb-index>
 <button class="onAddBtn" (click)="onAddRecipe">New Recipe</button>
-<rb-details [recipe]="selectedRecipe"></rb-details>
+<!--<rb-details [selectedRecipe]="selectedRecipe"></rb-details>
+-->
+<router-outlet></router-outlet>
 </div>
 

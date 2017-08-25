@@ -11,7 +11,6 @@ import { RecipeService } from "app/recipes/recipe.service";
 export class IndexComponent implements OnInit {
 
   @Input() recipes: Recipe[];
-  @Output() selected = new EventEmitter();
 
   selectedFromIndex(recipe: Recipe) {
     this.recipeService.pushSelectedRecipe(recipe);

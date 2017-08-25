@@ -7,13 +7,13 @@ export class RecipeService {
 
   constructor() { }
 
-  selectedRecipe: Recipe;
   pushRecipe = new EventEmitter();
 
   pushSelectedRecipe(recipe: Recipe) {
     this.pushRecipe.emit(recipe);
   }
 
+//******** array of recipes to seed app*******************//
   recipeSeeder: Recipe[] = [
     new Recipe(
       "Spaghetti and Meatballs", 

@@ -14,7 +14,7 @@ export class RecipeService {
   }
 
   getSelectedRecipe(title: String) {
-    return JSON.parse(localStorage.getItem('rb-'+title));
+    return JSON.parse(localStorage.getItem('rb-'+ title));
   }
 
 }

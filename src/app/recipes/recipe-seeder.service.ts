@@ -18,8 +18,7 @@ export class RecipeSeederService {
 //******** array of recipes to initially seed app*******************//
   recipeSeeder: Recipe[] = [
     new Recipe(
-      null,
-      null, 
+       null, 
         [
           null
         ],
@@ -28,8 +27,7 @@ export class RecipeSeederService {
         null
         ),
     new Recipe(
-      0,
-      "Spaghetti and Meatballs", 
+     "Spaghetti and Meatballs", 
         [
           new Ingredient("Spaghetti", 1, "pound"), 
           new Ingredient("Sauce", 1, "L"),
@@ -40,7 +38,6 @@ export class RecipeSeederService {
         "entree"
         ),
     new Recipe(
-      1,
       "Chicken Wings", 
         [
           new Ingredient("Chicken Wings", 12, "wings"), 
@@ -51,7 +48,6 @@ export class RecipeSeederService {
         "app",
         ),
     new Recipe(
-      2,
       "Turkey Sandwich", 
         [
           new Ingredient("Bread", 2, "slice"),
@@ -65,7 +61,6 @@ export class RecipeSeederService {
         "entree"
         ),
     new Recipe(
-      3,
       "Hot Fudge Sundae",
       [
         new Ingredient("Ice Cream", 3, "scoops"),

@@ -7,15 +7,36 @@ export class RecipeService {
 
   constructor() { }
 
+  localStoragePrefix = "rb-";
+  
   pushRecipe = new EventEmitter();
 
   pushSelectedRecipe(recipe: Recipe) {
     this.pushRecipe.emit(recipe);
   }
 
-//******** array of recipes to seed app*******************//
+  seedLocalStorage(){
+    if(!localStorage.getItem("rb-null")){
+    this.recipeSeeder.forEach(function(recipe){
+      localStorage.setItem("rb-" + recipe.title, JSON.stringify(recipe))
+    })
+    }
+  }
+
+//******** array of recipes to initially seed app*******************//
   recipeSeeder: Recipe[] = [
     new Recipe(
+      null,
+      null, 
+        [
+          null
+        ],
+        null,
+        null,
+        null
+        ),
+    new Recipe(
+      0,
       "Spaghetti and Meatballs", 
         [
           new Ingredient("Spaghetti", 1, "pound"), 
@@ -27,6 +48,7 @@ export class RecipeService {
         "entree"
         ),
     new Recipe(
+      1,
       "Chicken Wings", 
         [
           new Ingredient("Chicken Wings", 12, "wings"), 
@@ -37,6 +59,7 @@ export class RecipeService {
         "app",
         ),
     new Recipe(
+      2,
       "Turkey Sandwich", 
         [
           new Ingredient("Bread", 2, "slice"),
@@ -50,6 +73,7 @@ export class RecipeService {
         "entree"
         ),
     new Recipe(
+      3,
       "Hot Fudge Sundae",
       [
         new Ingredient("Ice Cream", 3, "scoops"),

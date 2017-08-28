@@ -1,3 +1,45 @@
-<p>
-  create works!
-</p>
+<h3>New Recipe</h3>
+<form #f="ngForm">
+  <div>
+    <label for="title">Title</label>
+    <input  type="text"
+            required
+            name="title"
+            placeholder="Title">
+  </div>
+    <div>
+    <label for="ingredients">Ingredients</label>
+    <input  type="text"
+            required
+            name="ingredients"
+            placeholder="Ingredients">
+  </div>
+  <div>
+    <label for="servings">Number of Servings</label>
+    <input  type="text"
+            required
+            name="servings"
+            placeholder="#">
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input  type="text"
+            required
+            name="image"
+            placeholder="url">
+  </div>
+  <div>
+    <label for="category">Category</label>
+    <select name="category">
+      <option value="app">Appetizer</option>
+      <option value="entree" selected>Entree</option>
+      <option value="dessert">Dessert</option>
+    </select>
+  </div>
+  <div>
+    <button [disabled]="!f.valid" type="submit" (click)=addRecipe(f)>
+      Submit
+    </button>
+  </div>
+
+</form>

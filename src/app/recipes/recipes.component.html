@@ -2,9 +2,8 @@
 <rb-index [recipes]="myRecipes"
           (selected)="selectRecipe($event)"
           ></rb-index>
-<button class="onAddBtn" (click)="onAddRecipe">New Recipe</button>
-<!--<rb-details [selectedRecipe]="selectedRecipe"></rb-details>
--->
+<button class="onAddBtn" (click)="onAddRecipe" [routerLink]="['/recipes/new']">New Recipe</button>
+<button class="onAddBtn" (click)="onEditRecipe">Edit Recipe</button>
 <router-outlet></router-outlet>
 </div>
 

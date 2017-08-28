@@ -19,6 +19,8 @@ export class IndexComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
+    this.recipeService.seedLocalStorage();
+    console.log(localStorage.getItem("rb-Chicken Wings"))
   }
 
 }

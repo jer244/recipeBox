@@ -10,6 +10,7 @@ import { DetailsComponent } from './recipes/details/details.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeService } from  './recipes/recipe.service';
 import { CreateComponent } from './recipes/create/create.component';
+import { RecipeSeederService } from "app/recipes/recipe-seeder.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { CreateComponent } from './recipes/create/create.component';
     HttpModule,
     routing
   ],
-  providers: [RecipeService],
+  providers: [RecipeService, RecipeSeederService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

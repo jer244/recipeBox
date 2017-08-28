@@ -8,7 +8,6 @@ import { CreateComponent } from "app/recipes/create/create.component";
 
 
 const APP_ROUTES: Routes = [
-
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [
         {path: '', component: DetailsComponent, pathMatch: 'full'},

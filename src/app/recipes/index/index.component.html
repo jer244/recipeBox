@@ -3,7 +3,7 @@
   Appetizers:
 </h3>
 <div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='app'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.id]">
+  <div *ngIf="recipe.category=='app'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.title]">
     <img src="{{recipe.image}}" class="indexImage">
     {{recipe.title}}
   </div>
@@ -12,7 +12,7 @@
   Entrees:
 </h3>
 <div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='entree'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.id]">
+  <div *ngIf="recipe.category=='entree'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.title]">
     <img src="{{recipe.image}}" class="indexImage">
     {{recipe.title}}
   </div>
@@ -21,7 +21,7 @@
   Desserts:
 </h3>
 <div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='dessert'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.id]">
+  <div *ngIf="recipe.category=='dessert'" (click)="selectedFromIndex(recipe)" [routerLink]="['/recipes', recipe.title]">
     <img src="{{recipe.image}}" class="indexImage">
     {{recipe.title}}
   </div>

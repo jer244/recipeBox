@@ -13,4 +13,8 @@ export class RecipeService {
     this.pushRecipe.emit(recipe);
   }
 
+  getSelectedRecipe(title: String) {
+    return JSON.parse(localStorage.getItem('rb-'+title));
+  }
+
 }

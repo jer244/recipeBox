@@ -10,11 +10,6 @@ import { RecipeService } from "app/recipes/recipe.service";
 })
 export class IndexComponent implements OnInit {
 
-
-  selectedFromIndex(recipe: Recipe) {
-    this.recipeService.pushSelectedRecipe(recipe);
-  }
-
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {

@@ -1,3 +1,10 @@
-<div>details</div>
-<div *ngIf="selectedRecipe">{{selectedRecipe | json}}</div>
-{{selectedRecipe}}
+<div *ngIf="selectedRecipe">
+    <div>
+        <h2>{{selectedRecipe.title}}</h2>
+        <h4>Ingredients</h4>
+        <pre><p>{{selectedRecipe.ingredients}}</p></pre>
+        <h4>Directions</h4>
+        <pre><p>{{selectedRecipe.directions}}</p></pre>
+        <img src="{{selectedRecipe.image}}">
+    </div>
+</div>

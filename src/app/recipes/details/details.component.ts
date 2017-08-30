@@ -16,11 +16,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(
-      (param: any) => {
-        this.selectedRecipe = this.recipeService.getSelectedRecipe(param['id']);
-        //this.selectedRecipe.ingredients = this.selectedRecipe.ingredients.replace(/(?:\r\n|\r|\n)/g, '<br/>');
-        //this.selectedRecipe.directions = this.selectedRecipe.directions.replace(/(?:\r\n|\r|\n)/g, '<br>');
-      }
+      (param: any) => this.selectedRecipe = this.recipeService.getSelectedRecipe(param['id'])
     )
   }
 }

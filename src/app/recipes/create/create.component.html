@@ -1,43 +1,60 @@
 <h3>New Recipe</h3>
-<form #f="ngForm">
+<form #f="ngForm" (ngSubmit)="onSubmitNew()">
   <div>
     <label for="title">Title</label>
     <input  type="text"
+            id="title"
+            [(ngModel)]="recipe.title"
             required
             name="title"
             placeholder="Title">
   </div>
     <div>
     <label for="ingredients">Ingredients</label>
-    <input  type="text"
+    <textarea 
+            id="ingredients"
+            [(ngModel)]="recipe.ingredients"
+            rows="5"
+            cols="60"
+            label="ingredients"
             required
             name="ingredients"
-            placeholder="Ingredients">
+            placeholder="Ingredients"></textarea>
   </div>
   <div>
-    <label for="servings">Number of Servings</label>
-    <input  type="text"
+    <label for="directions">Directions</label>
+    <textarea
+            id="directions"
+            [(ngModel)]="recipe.directions"
+            rows="5"
+            cols="60"
+            label="directions"
             required
             name="servings"
-            placeholder="#">
+            placeholder="Directions"></textarea>
   </div>
   <div>
     <label for="image">Image</label>
     <input  type="text"
+            id="image"
+            [(ngModel)]="recipe.image"
             required
             name="image"
             placeholder="url">
   </div>
   <div>
     <label for="category">Category</label>
-    <select name="category">
+    <select name="category"w
+            id="category"
+            [(ngModel)]="recipe.category"
+            required>
       <option value="app">Appetizer</option>
       <option value="entree" selected>Entree</option>
       <option value="dessert">Dessert</option>
     </select>
   </div>
   <div>
-    <button [disabled]="!f.valid" type="submit" (click)=addRecipe(f)>
+    <button [disabled]="!f.valid" type="submit">
       Submit
     </button>
   </div>

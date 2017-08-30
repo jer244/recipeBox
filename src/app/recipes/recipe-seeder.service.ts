@@ -40,7 +40,7 @@ export class RecipeSeederService {
         ),
     new Recipe(
       "Turkey Sandwich", 
-      "2 slices of bread\n3 slices of turkey breast\n2 pieces lettuce\n2 slices of tomato\n 2 oz mayo",
+      "2 slices of bread\n3 slices of turkey breast\n2 pieces lettuce\n2 slices of tomato\nmayo",
       "spread mayo on bread and assemble sandwich",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSALUV8gnFxhKN36nT8iO_xIaGWhyi5OgmgQQTuFdspYKtfh9i9cA",
       "entree"

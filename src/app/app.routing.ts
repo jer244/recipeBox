@@ -10,8 +10,8 @@ import { CreateComponent } from "app/recipes/create/create.component";
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [
-        {path: ':id', component: DetailsComponent},
-        {path: 'new', component: CreateComponent}
+        {path: 'new', component: CreateComponent},
+        {path: 'details/:id', component: DetailsComponent}
     ]},
     { path: '**', redirectTo: '/recipes' }
 ]

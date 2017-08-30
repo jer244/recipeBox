@@ -11,4 +11,8 @@ export class RecipeService {
     return JSON.parse(localStorage.getItem('rb-'+ title));
   }
 
+  addNew(recipe: Recipe) {
+    localStorage.setItem("rb-" + recipe.title, JSON.stringify(recipe));
+  }
+
 }

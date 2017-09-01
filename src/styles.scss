@@ -14,7 +14,7 @@ html, body {
     background-color: $primary-background-color;
     font-size: 2vw;
 }
-.mainGrid {
+.main-grid {
     display: grid;  
     min-height: 100%;  
     grid-template-columns: 20px 1fr 20px;
@@ -25,12 +25,12 @@ html, body {
         "footer footer footer";
 }
 
-.mainContentGrid {
+.main-content-grid {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.title {
+.main-header {
     grid-area: title;
     text-align: right;
     background-color: $secondary-background-color;
@@ -43,13 +43,13 @@ html, body {
     font-weight: bolder;
 }
 
-.bodyOutlet {
+.main-body {
     grid-area: bodyOutlet;
     background-color: $primary-background-color;
 
 }
 
-.footer {
+.main-footer {
     grid-area: footer;
     font-size: 1.4rem;
     font-weight: bolder;
@@ -73,7 +73,7 @@ html, body {
     }
 }
 
-.addBtnContainer {
+.add-btn-container {
     border: none;
     background-image: none;
     background-color: none;
@@ -82,12 +82,12 @@ html, body {
     height:7vw;
  }
 
- .plusSign {
+ .plus-sign {
      max-height: 100%;
      margin-right:2vh;
  }
 
-.indexMainContainer {
+.index-main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -96,7 +96,7 @@ html, body {
 }
 
 
-.indexImageContainer {
+.index-image-container {
     height: 35vw;
     width: 35vw;
     background-size: cover;
@@ -110,7 +110,7 @@ html, body {
     }
 }
 
-.indexTitleContainer {
+.index-title-container {
     background-color: $primary-border-color;
     border-radius: 1vw;
     width:96%;
@@ -125,7 +125,7 @@ html, body {
 
 @media screen and (min-width: 736px)
 {
-    .mainContentGrid {
+    .main-content-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

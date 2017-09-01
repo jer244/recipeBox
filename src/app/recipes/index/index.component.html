@@ -1,11 +1,11 @@
 
-  <div  class="indexMainContainer">  
+  <div  class="index-main-container">  
     <div *ngFor="let recipe of recipeList">
       <div  *ngIf="recipe.title!=null"
             [routerLink]="['/recipes', 'details', recipe.title]"
             [ngStyle]="{'background-image':'url(' + recipe.image + ')'}"
-            class="indexImageContainer">
-          <div class="indexTitleContainer">
+            class="index-image-container">
+          <div class="index-title-container">
             {{recipe.title}}
           </div>
       </div>

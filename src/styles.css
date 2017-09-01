@@ -6,18 +6,18 @@ html, body {
   background-color: #fff;
   font-size: 2vw; }
 
-.mainGrid {
+.main-grid {
   display: grid;
   min-height: 100%;
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "title title title" ". bodyOutlet ." "footer footer footer"; }
 
-.mainContentGrid {
+.main-content-grid {
   display: grid;
   grid-template-columns: 1fr; }
 
-.title {
+.main-header {
   grid-area: title;
   text-align: right;
   background-color: #ddd;
@@ -29,11 +29,11 @@ html, body {
   font-size: 3rem;
   font-weight: bolder; }
 
-.bodyOutlet {
+.main-body {
   grid-area: bodyOutlet;
   background-color: #fff; }
 
-.footer {
+.main-footer {
   grid-area: footer;
   font-size: 1.4rem;
   font-weight: bolder;
@@ -53,7 +53,7 @@ html, body {
   .btn:focus {
     box-shadow: none; }
 
-.addBtnContainer {
+.add-btn-container {
   border: none;
   background-image: none;
   background-color: none;
@@ -61,18 +61,18 @@ html, body {
   margin-bottom: 2vh;
   height: 7vw; }
 
-.plusSign {
+.plus-sign {
   max-height: 100%;
   margin-right: 2vh; }
 
-.indexMainContainer {
+.index-main-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-content: space-around;
   grid-row-gap: 7vh; }
 
-.indexImageContainer {
+.index-image-container {
   height: 35vw;
   width: 35vw;
   background-size: cover;
@@ -81,10 +81,10 @@ html, body {
   display: grid;
   align-items: end;
   justify-items: center; }
-  .indexImageContainer:hover {
+  .index-image-container:hover {
     box-shadow: inset 0 0 0 35vw rgba(100, 100, 100, 0.25); }
 
-.indexTitleContainer {
+.index-title-container {
   background-color: rgba(80, 80, 80, 0.85);
   border-radius: 1vw;
   width: 96%;
@@ -97,7 +97,7 @@ html, body {
   justify-items: center; }
 
 @media screen and (min-width: 736px) {
-  .mainContentGrid {
+  .main-content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; } }
 

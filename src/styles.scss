@@ -100,7 +100,7 @@ html, body {
     height: 35vw;
     width: 35vw;
     background-size: cover;
-    border: 0.8vw solid $primary-border-color;
+    border: 0.5vw solid $primary-border-color;
     border-radius: 1vw;
     display: grid;
     align-items: end;
@@ -113,11 +113,11 @@ html, body {
 .indexTitleContainer {
     background-color: $primary-border-color;
     border-radius: 1vw;
-    width:90%;
+    width:96%;
     height:7vw;    
     color: $primary-background-color;
     font-size: 1.2rem;
-    margin-bottom: 1vh;
+    margin-bottom: 0.3vh;
     display: grid;
     align-items: center;
     justify-items: center;

@@ -76,7 +76,7 @@ html, body {
   height: 35vw;
   width: 35vw;
   background-size: cover;
-  border: 0.8vw solid rgba(80, 80, 80, 0.85);
+  border: 0.5vw solid rgba(80, 80, 80, 0.85);
   border-radius: 1vw;
   display: grid;
   align-items: end;
@@ -87,11 +87,11 @@ html, body {
 .indexTitleContainer {
   background-color: rgba(80, 80, 80, 0.85);
   border-radius: 1vw;
-  width: 90%;
+  width: 96%;
   height: 7vw;
   color: #fff;
   font-size: 1.2rem;
-  margin-bottom: 1vh;
+  margin-bottom: 0.3vh;
   display: grid;
   align-items: center;
   justify-items: center; }

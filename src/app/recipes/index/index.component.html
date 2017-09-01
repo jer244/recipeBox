@@ -1,28 +1,13 @@
-<h2>Index</h2>
-<h3>
-  Appetizers:
-</h3>
-<div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='app'" [routerLink]="['/recipes', 'details', recipe.title]">
-    <img src="{{recipe.image}}" class="indexImage">
-    {{recipe.title}}
+
+  <div  class="indexMainContainer">  
+    <div *ngFor="let recipe of recipeList">
+      <div  *ngIf="recipe.title!=null"
+            [routerLink]="['/recipes', 'details', recipe.title]"
+            [ngStyle]="{'background-image':'url(' + recipe.image + ')'}"
+            class="indexImageContainer">
+          <div class="indexTitleContainer">
+            {{recipe.title}}
+          </div>
+      </div>
+    </div>
   </div>
-</div>
-<h3>
-  Entrees:
-</h3>
-<div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='entree'" [routerLink]="['/recipes', 'details', recipe.title]">
-    <img src="{{recipe.image}}" class="indexImage">
-    {{recipe.title}}
-  </div>
-</div>
-<h3>
-  Desserts:
-</h3>
-<div *ngFor="let recipe of recipeList">
-  <div *ngIf="recipe.category=='dessert'" [routerLink]="['/recipes', 'details', recipe.title]">
-    <img src="{{recipe.image}}" class="indexImage">
-    {{recipe.title}}
-  </div>
-</div>

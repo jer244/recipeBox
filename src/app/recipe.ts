@@ -1,5 +1,3 @@
-import { Ingredient } from "app/ingredient";
-
 export class Recipe {
         constructor(
             public title: string,

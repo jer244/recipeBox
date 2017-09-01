@@ -1,4 +1,9 @@
-<h1>
-  My Recipe Box
-</h1>
-<router-outlet></router-outlet>
+<div class="mainGrid">
+  <h3 class="title" [routerLink]="['/']">
+    My Recipe Box
+  </h3>
+  <div class="bodyOutlet">
+  <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">Recipe Box App - Jeremy Hurley 2017</footer>
+</div>

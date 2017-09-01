@@ -7,4 +7,5 @@
         <pre><p>{{selectedRecipe.directions}}</p></pre>
         <img src="{{selectedRecipe.image}}">
     </div>
+    <button (click)="onEditRecipe" [routerLink]="['/recipes', 'edit', selectedRecipe.title]">Edit Recipe</button>
 </div>

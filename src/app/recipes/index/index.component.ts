@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { Ingredient } from "app/ingredient";
 import { Recipe } from "app/recipe";
 import { RecipeService } from "app/recipes/recipe.service";
 

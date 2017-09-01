@@ -1,10 +1,10 @@
-<h3>New Recipe</h3>
+<h3>Edit Recipe</h3>
 <form #f="ngForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="title">Title</label>
     <input  type="text"
             id="title"
-            [(ngModel)]="recipe.title"
+            [(ngModel)]="changedRecipe.title"
             required
             name="title"
             placeholder="Title">
@@ -13,7 +13,7 @@
     <label for="ingredients">Ingredients</label>
     <textarea 
             id="ingredients"
-            [(ngModel)]="recipe.ingredients"
+            [(ngModel)]="changedRecipe.ingredients"
             rows="5"
             cols="60"
             label="ingredients"
@@ -25,7 +25,7 @@
     <label for="directions">Directions</label>
     <textarea
             id="directions"
-            [(ngModel)]="recipe.directions"
+            [(ngModel)]="changedRecipe.directions"
             rows="5"
             cols="60"
             label="directions"
@@ -37,16 +37,17 @@
     <label for="image">Image</label>
     <input  type="text"
             id="image"
-            [(ngModel)]="recipe.image"
+            [(ngModel)]="changedRecipe.image"
             required
             name="image"
             placeholder="url">
+      <img src="{{changedRecipe.image}}">
   </div>
   <div>
     <label for="category">Category</label>
     <select name="category"w
             id="category"
-            [(ngModel)]="recipe.category"
+            [(ngModel)]="changedRecipe.category"
             required>
       <option value="app">Appetizer</option>
       <option value="entree" selected>Entree</option>

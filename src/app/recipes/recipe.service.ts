@@ -1,5 +1,4 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { Ingredient } from "app/ingredient";
 import { Recipe } from "app/recipe";
 
 @Injectable()
@@ -15,4 +14,8 @@ export class RecipeService {
     localStorage.setItem("rb-" + recipe.title, JSON.stringify(recipe));
   }
 
+  editExisting(old: Recipe, edited: Recipe) {
+    localStorage.removeItem('rb-' + old.title);
+    localStorage.setItem('rb-' + edited.title, JSON.stringify(edited));
+  }
 }

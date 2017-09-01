@@ -1,11 +1,2 @@
-.appBody {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-.onAddBtn {
- 
-    grid-row: 2;
-    width: 100px;
-}
 

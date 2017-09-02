@@ -131,11 +131,10 @@ html, body {
   width: 70%; }
 
 .details-display {
-  width: 80vw; }
-  .details-display h3, .details-display h5 {
+  width: 80vw;
+  font-size: larger; }
+  .details-display h4, .details-display h5 {
     font-weight: bold; }
-  .details-display p {
-    font-size: bigger; }
 
 .details-image {
   max-width: 80%; }
@@ -190,8 +189,6 @@ label {
   .details-display {
     width: 40vw;
     font-size: smaller; }
-    .details-display h3, .details-display h5 {
-      font-weight: bold; }
 
   .details-image {
     max-width: 80%; }
@@ -200,7 +197,7 @@ label {
     border-bottom: 1.5px solid #666;
     padding: 0.3em;
     margin: 0;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     font-size: 2rem;
     font-weight: bolder; }
 
@@ -254,7 +251,7 @@ label {
     border-bottom: 1.5px solid #666;
     padding: 0.3em;
     margin: 0;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     font-size: 2rem;
     font-weight: bolder; }
 

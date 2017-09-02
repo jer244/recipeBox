@@ -12,6 +12,7 @@ import { RecipeService } from  './recipes/recipe.service';
 import { CreateComponent } from './recipes/create/create.component';
 import { RecipeSeederService } from "app/recipes/recipe-seeder.service";
 import { EditComponent } from './recipes/edit/edit.component';
+import { PlaceholderComponent } from './recipes/placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditComponent } from './recipes/edit/edit.component';
     DetailsComponent,
     RecipesComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    PlaceholderComponent
   ],
   imports: [
     BrowserModule,

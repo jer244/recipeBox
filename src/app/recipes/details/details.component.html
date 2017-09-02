@@ -5,7 +5,7 @@
         <pre><p>{{selectedRecipe.ingredients}}</p></pre>
         <h4>Directions</h4>
         <pre><p>{{selectedRecipe.directions}}</p></pre>
-        <img src="{{selectedRecipe.image}}">
+        <img class="details-image" src="{{selectedRecipe.image}}">
     </div>
     <button (click)="onEditRecipe" [routerLink]="['/recipes', 'edit', selectedRecipe.title]">Edit Recipe</button>
 </div>

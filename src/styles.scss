@@ -5,7 +5,6 @@ $primary-highlight-color: #ff7e1a;
 $secondary-highlight-color: #feaa26;
 $primary-border-color: rgba(80, 80, 80, .85);
 
-
 html, body {
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@ html, body {
     background-color: $primary-background-color;
     font-size: 2vw;
 }
-.main-grid {
+.main-container {
     display: grid;  
     min-height: 100%;  
     grid-template-columns: 20px 1fr 20px;
@@ -25,9 +24,11 @@ html, body {
         "footer footer footer";
 }
 
-.main-content-grid {
+.content-container {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
+    grid-column-gap: 3vh;
 }
 
 .main-header {
@@ -36,7 +37,7 @@ html, body {
     background-color: $secondary-background-color;
     border-bottom: 1px solid $primary-font-color;
     color: $primary-highlight-color;
-    padding:0.6em;
+    padding:0.4em;
     margin: 0;
     margin-bottom: 2vh;
     font-size:3rem;
@@ -91,8 +92,8 @@ html, body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    align-content: space-around;
-    grid-row-gap: 7vh;
+    grid-row-gap: 3vh;
+    grid-column-gap: 2vh;
 }
 
 
@@ -123,10 +124,126 @@ html, body {
     justify-items: center;
 }
 
+.content-placeholder {
+    padding-top:3vw;
+}
+.placeholder {
+    display: none;
+}
+.details-image{
+    width:70vw;
+}
+
 @media screen and (min-width: 736px)
 {
-    .main-content-grid {
-        display: grid;
+    .content-container {
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3vh;        
+    }
+    .index-main-container {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-row-gap: 2vh;
+        grid-column-gap: 2vh;
+    }
+    .index-image-container {
+        height: 22vw;
+        width: 22vw;
+        border: 0.3vw solid $primary-border-color;
+        &:hover{
+            box-shadow: inset 0 0 0 22vw rgba(100, 100, 100, 0.25);
+        }
+    }
+    .index-title-container {
+        height:5vw; 
+        font-size: 0.8rem;
+        margin-bottom: 0.3vh;
+    }
+    .content-placeholder {
+        width: 40vw;
+    }
+    .details-image{
+        width:35vw;
+    }
+    .main-header {
+        border-bottom: 1.5px solid $primary-font-color;
+        padding:0.3em;
+        margin: 0;
+        margin-bottom: 1vh;
+        font-size:2rem;
+        font-weight: bolder;
+    }
+    .main-footer {
+        font-size: 1rem;
+        font-weight: bolder;
+        border-top: 1.5px solid $primary-font-color;
+        padding: 0.2rem;
+    }
+    .placeholder {
+        display: block;
+        background-color: $secondary-background-color;
+        color: $primary-background-color;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 2rem;
+        margin: 0;
+        text-align: center;
+    }
+
+
+}
+@media screen and (min-width: 1000px)
+{
+     .index-main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        grid-row-gap: 2vh;
+        grid-column-gap: 2vh;
+    }
+    .index-image-container {
+        height: 15vw;
+        width: 15vw;
+        background-size: cover;
+        border: 0.2vw solid $primary-border-color;
+        border-radius: 0.5vw;
+        display: grid;
+        align-items: end;
+        justify-items: center;
+        &:hover{
+            box-shadow: inset 0 0 0 20vw rgba(100, 100, 100, 0.25);
+        }
+    }
+    .index-title-container {
+        background-color: $primary-border-color;
+        border-radius: 0.5vw;
+        width:96%;
+        height:3.5vw;    
+        color: $primary-background-color;
+        font-size: 0.6rem;
+        margin-bottom: 0.25vh;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .content-placeholder {
+        width: 40vw;
+    }
+    .details-image{
+        width:35vw;
+    }
+    .main-header {
+        border-bottom: 1.5px solid $primary-font-color;
+        padding:0.3em;
+        margin: 0;
+        margin-bottom: 1vh;
+        font-size:2rem;
+        font-weight: bolder;
+    }
+    .main-footer {
+        font-size: 1rem;
+        font-weight: bolder;
+        border-top: 1.5px solid $primary-font-color;
+        padding: 0.2rem;
     }
 }

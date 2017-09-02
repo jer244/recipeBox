@@ -1,11 +1,11 @@
-<div *ngIf="selectedRecipe">
+<div class="details-display" *ngIf="selectedRecipe">
     <div>
-        <h2>{{selectedRecipe.title}}</h2>
-        <h4>Ingredients</h4>
+        <h3>{{selectedRecipe.title}}</h3>
+        <h5>Ingredients</h5>
         <pre><p>{{selectedRecipe.ingredients}}</p></pre>
-        <h4>Directions</h4>
+        <h5>Directions</h5>
         <pre><p>{{selectedRecipe.directions}}</p></pre>
         <img class="details-image" src="{{selectedRecipe.image}}">
     </div>
-    <button (click)="onEditRecipe" [routerLink]="['/recipes', 'edit', selectedRecipe.title]">Edit Recipe</button>
+    <button class="btn" (click)="onEditRecipe" [routerLink]="['/recipes', 'edit', selectedRecipe.title]">Edit Recipe</button>
 </div>

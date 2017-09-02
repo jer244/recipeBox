@@ -1,9 +1,10 @@
 <h3>Edit Recipe</h3>
-<form #f="ngForm" (ngSubmit)="onSubmit()">
+<form class="recipe-form" #f="ngForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="title">Title</label>
     <input  type="text"
             id="title"
+            size="40"
             [(ngModel)]="changedRecipe.title"
             required
             name="title"
@@ -15,7 +16,7 @@
             id="ingredients"
             [(ngModel)]="changedRecipe.ingredients"
             rows="5"
-            cols="60"
+            cols="50"
             label="ingredients"
             required
             name="ingredients"
@@ -27,7 +28,7 @@
             id="directions"
             [(ngModel)]="changedRecipe.directions"
             rows="5"
-            cols="60"
+            cols="50"
             label="directions"
             required
             name="servings"
@@ -37,6 +38,7 @@
     <label for="image">Image</label>
     <input  type="text"
             id="image"
+            size="40"
             [(ngModel)]="changedRecipe.image"
             required
             name="image"
@@ -44,7 +46,7 @@
       <img class="details-image" src="{{changedRecipe.image}}">
   </div>
   <div>
-    <button [disabled]="!f.valid" type="submit">
+    <button class="btn" [disabled]="!f.valid" type="submit" [routerLink]="['/recipes', 'details', changedRecipe.title]">
       Submit
     </button>
   </div>

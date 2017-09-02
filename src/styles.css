@@ -16,7 +16,6 @@ html, body {
 .content-container {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
   grid-column-gap: 3vh; }
 
 .main-header {
@@ -48,11 +47,11 @@ html, body {
   margin-top: 2vw; }
 
 .btn {
-  background-color: #ff7e1a;
-  color: #666;
+  background-color: #666;
+  color: #fff;
   border: 1px solid #ddd; }
   .btn:hover {
-    background-color: #e68d01; }
+    background-color: #474747; }
   .btn:focus {
     box-shadow: none; }
 
@@ -91,7 +90,7 @@ html, body {
   width: 35vw;
   background-size: cover;
   border: 0.5vw solid rgba(80, 80, 80, 0.85);
-  border-radius: 1vw;
+  border-radius: 2px;
   display: grid;
   align-items: end;
   justify-items: center; }
@@ -100,7 +99,7 @@ html, body {
 
 .index-title-container {
   background-color: rgba(80, 80, 80, 0.85);
-  border-radius: 1vw;
+  border-radius: 2px;
   width: 96%;
   height: 7vw;
   color: #fff;
@@ -110,19 +109,62 @@ html, body {
   align-items: center;
   justify-items: center; }
 
-.content-placeholder {
-  padding-top: 3vw; }
+.content-outlet {
+  width: 80vw; }
+
+.placeholder-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; }
 
 .placeholder {
-  display: none; }
+  display: block;
+  background-color: #c4c4c4;
+  color: #fff;
+  border: 6px double #fff;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2rem;
+  margin: 5vw auto 2vw auto;
+  text-align: center;
+  width: 70%; }
+
+.details-display {
+  width: 80vw; }
+  .details-display h3, .details-display h5 {
+    font-weight: bold; }
+  .details-display p {
+    font-size: bigger; }
 
 .details-image {
-  width: 70vw; }
+  max-width: 80%; }
 
+label {
+  display: block;
+  text-align: left;
+  font-weight: bolder; }
+
+@media screen and (min-width: 470px) {
+  .index-main-container {
+    grid-template-columns: 1fr 1fr 1fr; }
+
+  .index-image-container {
+    height: 28vw;
+    width: 28vw;
+    border: 0.3vw solid rgba(80, 80, 80, 0.85); }
+    .index-image-container:hover {
+      box-shadow: inset 0 0 0 22vw rgba(100, 100, 100, 0.25); }
+
+  .index-title-container {
+    height: 6vw;
+    font-size: 0.8rem;
+    margin-bottom: 0.35vh; } }
 @media screen and (min-width: 736px) {
   .content-container {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 3vh; }
+    grid-column-gap: 3vh;
+    justify-items: center; }
 
   .index-main-container {
     grid-template-columns: 1fr 1fr;
@@ -140,13 +182,19 @@ html, body {
   .index-title-container {
     height: 5vw;
     font-size: 0.8rem;
-    margin-bottom: 0.3vh; }
+    margin-bottom: 0.35vh; }
 
-  .content-placeholder {
+  .content-outlet {
     width: 40vw; }
 
+  .details-display {
+    width: 40vw;
+    font-size: smaller; }
+    .details-display h3, .details-display h5 {
+      font-weight: bold; }
+
   .details-image {
-    width: 35vw; }
+    max-width: 80%; }
 
   .main-header {
     border-bottom: 1.5px solid #666;
@@ -162,15 +210,11 @@ html, body {
     border-top: 1.5px solid #666;
     padding: 0.2rem; }
 
+  .recipe-form {
+    font-size: smaller; }
+
   .placeholder {
-    display: block;
-    background-color: #ddd;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 2rem;
-    margin: 0;
-    text-align: center; } }
+    margin-top: 5vw; } }
 @media screen and (min-width: 1000px) {
   .index-main-container {
     display: grid;
@@ -184,7 +228,7 @@ html, body {
     width: 15vw;
     background-size: cover;
     border: 0.2vw solid rgba(80, 80, 80, 0.85);
-    border-radius: 0.5vw;
+    border-radius: 2px;
     display: grid;
     align-items: end;
     justify-items: center; }
@@ -193,18 +237,15 @@ html, body {
 
   .index-title-container {
     background-color: rgba(80, 80, 80, 0.85);
-    border-radius: 0.5vw;
+    border-radius: 2px;
     width: 96%;
     height: 3.5vw;
     color: #fff;
     font-size: 0.6rem;
-    margin-bottom: 0.25vh;
+    margin-bottom: 0.3vh;
     display: grid;
     align-items: center;
     justify-items: center; }
-
-  .content-placeholder {
-    width: 40vw; }
 
   .details-image {
     width: 35vw; }

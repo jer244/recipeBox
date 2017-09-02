@@ -3,7 +3,6 @@ export class Recipe {
             public title: string,
             public ingredients: string,
             public directions: string,
-            public image: string,
-            public category?: string
+            public image: string
         ){}
 }

@@ -44,17 +44,6 @@
       <img class="details-image" src="{{changedRecipe.image}}">
   </div>
   <div>
-    <label for="category">Category</label>
-    <select name="category"w
-            id="category"
-            [(ngModel)]="changedRecipe.category"
-            required>
-      <option value="app">Appetizer</option>
-      <option value="entree" selected>Entree</option>
-      <option value="dessert">Dessert</option>
-    </select>
-  </div>
-  <div>
     <button [disabled]="!f.valid" type="submit">
       Submit
     </button>

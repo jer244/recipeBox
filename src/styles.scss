@@ -60,6 +60,7 @@ html, body {
     color: $primary-highlight-color;
     padding: 0.3rem;
     margin: 0;
+    margin-top: 2vw;
 }
 
 .btn {
@@ -82,10 +83,22 @@ html, body {
     margin-bottom: 2vh;
     height:7vw;
  }
+.add-btn {
+    background-color: $secondary-background-color;
+    border-radius: 50%;
+    padding:0.8vw;
+    margin:auto;
+    margin-right: 2vh;
+    height:6.5vw;
+    width:6.5vw;
+    &:hover{
+        background-color: darken($secondary-background-color, 15%);
+    }
+}
 
  .plus-sign {
      max-height: 100%;
-     margin-right:2vh;
+     margin:0;
  }
 
 .index-main-container {

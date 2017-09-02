@@ -1,5 +1,5 @@
 <div class="add-btn-container">
-    <a [routerLink]="['/recipes/new']" ><img class="plus-sign" src="../assets/plus-sign.png"></a>
+    <div class="add-btn" [routerLink]="['/recipes/new']"><img class="plus-sign" src="../assets/plus-sign.png"></div>
 </div>
 <div class="content-container">
     <rb-index (selected)="selectRecipe($event)"></rb-index>

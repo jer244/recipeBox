@@ -15,7 +15,7 @@
             id="ingredients"
             [(ngModel)]="recipe.ingredients"
             rows="5"
-            cols="60"
+            cols="40"
             label="ingredients"
             required
             name="ingredients"
@@ -27,7 +27,7 @@
             id="directions"
             [(ngModel)]="recipe.directions"
             rows="5"
-            cols="60"
+            cols="40"
             label="directions"
             required
             name="servings"
@@ -41,17 +41,6 @@
             required
             name="image"
             placeholder="url">
-  </div>
-  <div>
-    <label for="category">Category</label>
-    <select name="category"w
-            id="category"
-            [(ngModel)]="recipe.category"
-            required>
-      <option value="app">Appetizer</option>
-      <option value="entree" selected>Entree</option>
-      <option value="dessert">Dessert</option>
-    </select>
   </div>
   <div>
     <button [disabled]="!f.valid" type="submit">

@@ -5,21 +5,21 @@ import { RecipeSeederService } from "app/recipes/recipe-seeder.service";
 
 @Component({
   selector: 'rb-recipes',
-  templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.css']
+  templateUrl: './recipes.component.html'
 })
 export class RecipesComponent implements OnInit {
 
   selectedRecipe: Recipe = null;
 
-  selectRecipe(recipe: Recipe){
+  selectRecipe(recipe: Recipe) {
     this.selectedRecipe = recipe;
   }
 
-  constructor(private recipeService: RecipeService, private seeder: RecipeSeederService) { }
+  constructor(private recipeService: RecipeService, private seeder: RecipeSeederService) {}
 
   ngOnInit() {
     this.seeder.seedLocalStorage();
   }
 
 }
+

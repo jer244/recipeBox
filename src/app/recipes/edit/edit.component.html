@@ -1,52 +1,26 @@
 <h3>Edit Recipe</h3>
-<form class="recipe-form" #f="ngForm" (ngSubmit)="onSubmit()">
+<form class="recipe-form" #f="ngForm">
   <div>
     <label for="title">Title</label>
-    <input  type="text"
-            id="title"
-            size="40"
-            [(ngModel)]="changedRecipe.title"
-            required
-            name="title"
-            placeholder="Title">
+    <input type="text" id="title" size="40" [(ngModel)]="changedRecipe.title" required name="title" placeholder="Title">
   </div>
-    <div>
+  <div>
     <label for="ingredients">Ingredients</label>
-    <textarea 
-            id="ingredients"
-            [(ngModel)]="changedRecipe.ingredients"
-            rows="5"
-            cols="50"
-            label="ingredients"
-            required
-            name="ingredients"
-            placeholder="Ingredients"></textarea>
+    <textarea id="ingredients" [(ngModel)]="changedRecipe.ingredients" rows="5" cols="50" label="ingredients" required name="ingredients"
+      placeholder="Ingredients"></textarea>
   </div>
   <div>
     <label for="directions">Directions</label>
-    <textarea
-            id="directions"
-            [(ngModel)]="changedRecipe.directions"
-            rows="5"
-            cols="50"
-            label="directions"
-            required
-            name="servings"
-            placeholder="Directions"></textarea>
+    <textarea id="directions" [(ngModel)]="changedRecipe.directions" rows="5" cols="50" label="directions" required name="servings"
+      placeholder="Directions"></textarea>
   </div>
   <div>
     <label for="image">Image</label>
-    <input  type="text"
-            id="image"
-            size="40"
-            [(ngModel)]="changedRecipe.image"
-            required
-            name="image"
-            placeholder="url">
-      <img class="details-image" src="{{changedRecipe.image}}">
+    <input type="text" id="image" size="40" [(ngModel)]="changedRecipe.image" required name="image" placeholder="url">
+    <img class="details-image" src="{{changedRecipe.image}}">
   </div>
   <div>
-    <button class="btn" [disabled]="!f.valid" type="submit" [routerLink]="['/recipes', 'details', changedRecipe.title]">
+    <button class="btn" [disabled]="!f.valid" type="submit" (click)="onSubmit()" [routerLink]="['/recipes', 'details', changedRecipe.title]">
       Submit
     </button>
   </div>

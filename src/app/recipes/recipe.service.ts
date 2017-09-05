@@ -4,10 +4,10 @@ import { Recipe } from "app/recipe";
 @Injectable()
 export class RecipeService {
 
-  constructor() { }
+  constructor() {}
 
   getSelectedRecipe(title: String) {
-    return JSON.parse(localStorage.getItem('rb-'+ title));
+    return JSON.parse(localStorage.getItem('rb-' + title));
   }
 
   addNew(recipe: Recipe) {
@@ -17,5 +17,9 @@ export class RecipeService {
   editExisting(old: Recipe, edited: Recipe) {
     localStorage.removeItem('rb-' + old.title);
     localStorage.setItem('rb-' + edited.title, JSON.stringify(edited));
+  }
+
+  deleteRecipe(recipe: Recipe) {
+    localStorage.removeItem('rb-' + recipe.title);
   }
 }

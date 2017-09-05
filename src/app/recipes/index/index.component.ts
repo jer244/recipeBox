@@ -4,23 +4,22 @@ import { RecipeService } from "app/recipes/recipe.service";
 
 @Component({
   selector: 'rb-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   get recipeList(): Recipe[] {
-    var tempRecipes: Recipe[] =[];
-    for(let i = 0; i < localStorage.length; i++){
-      if(localStorage.key(i).toString().match(/(rb-)/)){
+    var tempRecipes: Recipe[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      if ((localStorage.key(i).toString().match(/(rb-)/)) && (localStorage.key(i).toString() != "rb-null")) {
         tempRecipes.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
       }
     }
     return tempRecipes;
   }
 }
+

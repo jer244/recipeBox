@@ -6,19 +6,19 @@ import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'rb-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  templateUrl: './create.component.html'
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private recipeService: RecipeService, private activatedRoute: ActivatedRoute) { }
+  constructor(private recipeService: RecipeService, private activatedRoute: ActivatedRoute) {}
   recipe: Recipe;
 
   ngOnInit() {
-    this.recipe= new Recipe(null, null, null, null)
+    this.recipe = new Recipe(null, null, null, null)
   }
 
   onSubmit() {
     this.recipeService.addNew(this.recipe);
   }
 }
+

@@ -2,45 +2,21 @@
 <form class="recipe-form" #f="ngForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="title">Title</label>
-    <input  type="text"
-            id="title"
-            [(ngModel)]="recipe.title"
-            required
-            name="title"
-            placeholder="Title">
+    <input type="text" id="title" [(ngModel)]="recipe.title" required name="title" placeholder="Title">
   </div>
-    <div>
+  <div>
     <label for="ingredients">Ingredients</label>
-    <textarea 
-            id="ingredients"
-            [(ngModel)]="recipe.ingredients"
-            rows="5"
-            cols="50"
-            label="ingredients"
-            required
-            name="ingredients"
-            placeholder="Ingredients"></textarea>
+    <textarea id="ingredients" [(ngModel)]="recipe.ingredients" rows="5" cols="50" label="ingredients" required name="ingredients"
+      placeholder="Ingredients"></textarea>
   </div>
   <div>
     <label for="directions">Directions</label>
-    <textarea
-            id="directions"
-            [(ngModel)]="recipe.directions"
-            rows="5"
-            cols="50"
-            label="directions"
-            required
-            name="servings"
-            placeholder="Directions"></textarea>
+    <textarea id="directions" [(ngModel)]="recipe.directions" rows="5" cols="50" label="directions" required name="servings"
+      placeholder="Directions"></textarea>
   </div>
   <div>
     <label for="image">Image</label>
-    <input  type="text"
-            id="image"
-            [(ngModel)]="recipe.image"
-            required
-            name="image"
-            placeholder="url">
+    <input type="text" id="image" [(ngModel)]="recipe.image" required name="image" placeholder="url">
   </div>
   <div>
     <button class="btn" [routerLink]="['/recipes', 'details', recipe.title]" [disabled]="!f.valid" type="submit" (click)="onSubmit()">
